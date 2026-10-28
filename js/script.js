@@ -49,3 +49,37 @@ window.addEventListener('scroll', () => {
 upBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+
+    // Изменение размера шрифта
+    document.getElementById('font-normal').addEventListener('click', () => {
+        body.classList.remove('font-large', 'font-xlarge');
+    });
+    document.getElementById('font-large').addEventListener('click', () => {
+        body.classList.remove('font-xlarge');
+        body.classList.add('font-large');
+    });
+    document.getElementById('font-xlarge').addEventListener('click', () => {
+        body.classList.remove('font-large');
+        body.classList.add('font-xlarge');
+    });
+
+    // Изменение цветовой схемы
+    document.getElementById('theme-default').addEventListener('click', () => {
+        body.classList.remove('theme-bw', 'theme-invert');
+    });
+    document.getElementById('theme-bw').addEventListener('click', () => {
+        body.classList.remove('theme-invert');
+        body.classList.add('theme-bw');
+    });
+    document.getElementById('theme-invert').addEventListener('click', () => {
+        body.classList.remove('theme-bw');
+        body.classList.add('theme-invert');
+    });
+});
+
+upBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+});
