@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВелоПрокат — Стильная аренда</title>
+  
+  <!-- Подключение шрифтов -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  
+  <!-- Подключение внешних стилей -->
+  <link rel="stylesheet" href="css/s.css">
+</head>
+<body>
+
+  <header>
+    <h1>Крути Педали</h1>
+    <p>Современный городской прокат велосипедов нового поколения</p>
+  </header>
+
+  <div class="container">
+        <!-- ОБНОВЛЕННЫЙ КАТАЛОГ С РЕАЛЬНЫМИ ФОТОГРАФИЯМИ -->
+    <div class="catalog">
+      
+      <!-- Карточка 1: Городской -->
+      <div class="bike-card selected reveal-hidden" onclick="selectBike(this, 350, 'Городской')">
+        <div class="bike-img-wrap">
+          <img src="https://unsplash.com" alt="Городской велосипед" class="bike-photo">
+        </div>
+        <div class="bike-info">
+          <h3>Городской классик</h3>
+          <p class="bike-desc">Легкий байк с корзиной, идеален для неторопливых прогулок по паркам и улочкам.</p>
+          <div class="bike-price">350 ₽ / час</div>
+        </div>
+      </div>
+      
+      <!-- Карточка 2: Горный -->
+      <div class="bike-card reveal-hidden" onclick="selectBike(this, 500, 'Горный')">
+        <div class="bike-img-wrap">
+          <img src="https://unsplash.com" alt="Горный велосипед" class="bike-photo">
+        </div>
+        <div class="bike-info">
+          <h3>Горный кросс-кантри</h3>
+          <p class="bike-desc">Усиленная рама, отличная амортизация и цепкие шины для лесных троп и бездорожья.</p>
+          <div class="bike-price">500 ₽ / час</div>
+        </div>
+      </div>
+      
+      <!-- Карточка 3: Электровелосипед -->
+      <div class="bike-card reveal-hidden" onclick="selectBike(this, 800, 'Электро')">
+        <div class="bike-img-wrap">
+          <img src="https://unsplash.com" alt="Электровелосипед" class="bike-photo">
+        </div>
+        <div class="bike-info">
+          <h3>Электробайк E-Motion</h3>
+          <p class="bike-desc">Мощный мотор сделает всю тяжелую работу за вас. Запас хода батареи — до 60 км.</p>
+          <div class="bike-price">800 ₽ / час</div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <section class="booking-section reveal-hidden">
+      <h2>Быстрое бронирование</h2>
+      <form id="rentForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hours">Время аренды (часов):</label>
+            <input type="number" id="hours" min="1" max="24" value="2" oninput="calculateTotal()">
+          </div>
+          <div class="form-group">
+            <label>Итого к оплате:</label>
+            <input type="text" id="totalDisplay" value="700 ₽" disabled style="background: #f8f9fa; font-weight: bold; color: var(--primary);">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" placeholder="Александр" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+          </div>
+        </div>
+
+        <button type="submit">Забронировать байк</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  <!-- ... предыдущий код (контейнер и секция бронирования) ... -->
+  </div>
+
+  <!-- КРАСИВЫЙ ПОДВАЛ (FOOTER) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Блок 1: О нас -->
+      <div class="footer-block reveal-hidden">
+        <h3>Крути Педали</h3>
+        <p>Ваш надежный гид в мире городских и загородных велопрогулок. Лучшие байки в городе для вашего комфорта.</p>
+      </div>
+
+      <!-- Блок 2: График работы -->
+      <div class="footer-block reveal-hidden">
+        <h3>Режим работы</h3>
+        <table class="schedule-table">
+          <tr><td>Пн – Пт:</td><td>09:00 – 21:00</td></tr>
+          <tr><td>Сб – Вс:</td><td>08:00 – 22:00</td></tr>
+          <tr><td class="status-title">Статус:</td><td class="status-value">Открыто</td></tr>
+        </table>
+      </div>
+
+      <!-- Блок 3: Соцсети -->
+      <div class="footer-block reveal-hidden">
+        <h3>Мы в соцсетях</h3>
+        <p>Подписывайтесь, чтобы следить за акциями и обновлениями парка!</p>
+        <div class="social-links">
+          <a href="#" class="social-icon telegram" title="Telegram">TG</a>
+          <a href="#" class="social-icon vk" title="ВКонтакте">VK</a>
+          <a href="#" class="social-icon whatsapp" title="WhatsApp">WA</a>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Нижняя полоса с копирайтом -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Велопрокат "Крути Педали". Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Подключение локального скрипта -->
+  <script src="js/s.js"></script>
+</body>
+</html>
+
