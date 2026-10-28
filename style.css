@@ -265,6 +265,7 @@ footer {
     #about { flex-direction: column; text-align: center; }
     section { margin: 40px 0; }
 }
+}
 /* Базовые стили панели */
 .a11y-panel {
     display: flex;
