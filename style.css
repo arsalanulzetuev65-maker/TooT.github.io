@@ -265,3 +265,48 @@ footer {
     #about { flex-direction: column; text-align: center; }
     section { margin: 40px 0; }
 }
+/* Базовые стили панели */
+.a11y-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.a11y-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.a11y-panel button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #666;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Модификаторы размеров (применяются к body) */
+body.font-large { font-size: 1.25rem !important; }
+body.font-xlarge { font-size: 1.5rem !important; }
+
+/* Модификаторы цветов */
+body.theme-bw {
+    background-color: #fff !important;
+    color: #000 !important;
+    filter: grayscale(1) contrast(1.5);
+}
+body.theme-bw a, body.theme-bw button {
+    color: #000 !important;
+    border-color: #000 !important;
+}
+
+body.theme-invert {
+    background-color: #000 !important;
+    color: #fff !important;
+    filter: invert(1) hue-rotate(180deg);
+}
